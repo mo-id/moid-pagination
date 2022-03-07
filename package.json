@@ -1,6 +1,6 @@
 {
   "name": "@mo-id/pagination",
-  "repository": "git://github.com/mo-id/moid-nest-toolbelt.git",
+  "repository": "git://github.com/mo-id/moid-pagination.git",
   "author": "moid",
   "version": "0.1.0",
   "license": "MIT",
