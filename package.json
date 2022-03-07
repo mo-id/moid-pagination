@@ -1,0 +1,68 @@
+{
+  "name": "@mo-id/pagination",
+  "repository": "git://github.com/mo-id/moid-nest-toolbelt.git",
+  "author": "moid",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "compile": "tsc",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "@nestjs/common": ">=8",
+    "@nestjs/config": ">=1",
+    "@nestjs/core": ">=8",
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/moid-pagination.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/moid-pagination.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/moid-pagination.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "husky": "^7.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  }
+}
