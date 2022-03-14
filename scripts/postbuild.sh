@@ -6,6 +6,6 @@ mv ./dist ./__dist
 mkdir ./react
 
 # 'dist/esm/index2' is a chunk created for 'src/react/index.ts'
-echo 'export * from "../__dist/esm/index2";' > ./react/index.js
+echo 'module.exports = require("./pagination.cjs.production.min.js");' > ./react/index.js
 
 echo 'export * from "../__dist/react";' > ./react/index.d.ts

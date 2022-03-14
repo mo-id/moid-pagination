@@ -1,1 +1,1 @@
-export * from "../__dist/esm/index2";
+module.exports = require("./pagination.cjs.production.min.js");
