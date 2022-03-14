@@ -4,27 +4,28 @@
   "author": "moid",
   "version": "0.1.9",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "__dist/index.js",
+  "module": "__dist/esm/index.js",
+  "typings": "__dist/index.d.ts",
   "files": [
-    "dist/react"
+    "__dist",
+    "__src",
+    "react"
   ],
   "engines": {
     "node": ">=10"
   },
-  "exports": {
-    "./react": "./react/index.ts",
-    "./types": "./types/index.js"
-  },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build && sh ./scripts/postbuild.sh",
     "compile": "tsc",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "npm run build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "prepack": "sh ./scripts/prepack.sh",
+    "postpack": "sh ./scripts/postpack.sh"
   },
   "peerDependencies": {
     "@nestjs/common": ">=8",
@@ -43,7 +44,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "module": "dist/moid-pagination.esm.js",
   "size-limit": [
     {
       "path": "dist/moid-pagination.cjs.production.min.js",
