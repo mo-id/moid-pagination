@@ -24,8 +24,8 @@
     "prepare": "npm run build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "prepack": "sh ./scripts/prepack.sh",
-    "postpack": "sh ./scripts/postpack.sh"
+    "prepublish": "sh ./scripts/prepack.sh",
+    "postpublish": "sh ./scripts/postpack.sh"
   },
   "peerDependencies": {
     "@nestjs/common": ">=8",
