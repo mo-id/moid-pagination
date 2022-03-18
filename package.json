@@ -24,7 +24,8 @@
     "prepare": "npm run build && husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "postpack": "sh ./scripts/postpack.sh"
+    "cleanup": "sh ./scripts/cleanup.sh",
+    "postpack": "npm run cleanup"
   },
   "size-limit": [
     {
