@@ -1,1 +1,1 @@
-export * from "./index.d";
+export * from "../__dist/types/Paginated.interface.d";
