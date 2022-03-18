@@ -2,6 +2,4 @@
 .DS_Store
 node_modules
 dist
-__dist
-__src
 .npmrc
