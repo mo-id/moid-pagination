@@ -2,14 +2,13 @@
   "name": "@mo-id/pagination",
   "repository": "git://github.com/mo-id/moid-pagination.git",
   "author": "moid",
-  "version": "0.2.8",
+  "version": "0.2.10",
   "license": "MIT",
-  "main": "__dist/index.js",
-  "module": "__dist/esm/index.js",
-  "typings": "__dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "__dist",
-    "__src",
+    "dist",
     "react",
     "types"
   ],
@@ -25,8 +24,8 @@
     "prepare": "npm run build && husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "prepack": "sh ./scripts/prepack.sh",
-    "postpack": "sh ./scripts/postpack.sh"
+    "cleanup": "sh ./scripts/cleanup.sh",
+    "postpack": "npm run cleanup"
   },
   "size-limit": [
     {
