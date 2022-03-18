@@ -3,5 +3,4 @@
 node_modules
 dist
 __dist
-
-.npmrc
+__src

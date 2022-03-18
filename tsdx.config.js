@@ -7,7 +7,11 @@ module.exports = {
     if (options.format === 'esm') {
       return {
         ...config,
-        input: [relativePath('src/react/index.ts')],
+        input: [
+          relativePath('src/index.ts'),
+          relativePath('src/react/index.ts'),
+          relativePath('src/types/index.ts'),
+        ],
         output: {
           ...config.output,
           file: undefined,
