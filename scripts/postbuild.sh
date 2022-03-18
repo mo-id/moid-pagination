@@ -9,3 +9,4 @@ echo 'export * from "../__dist/esm/index3";' > ./react/index.js
 echo 'export * from "./index.d";' > ./types/index.js
 
 echo 'export * from "../__dist/react";' > ./react/index.d.ts
+echo 'export * from "../__dist/types";' > ./types/index.d.ts
