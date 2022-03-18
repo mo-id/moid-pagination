@@ -23,7 +23,8 @@
     "lint": "tsdx lint",
     "prepare": "npm run build && husky install",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "postpack": "sh ./scripts/postpack.sh"
   },
   "size-limit": [
     {
