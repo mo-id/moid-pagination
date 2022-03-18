@@ -2,7 +2,7 @@
   "name": "@mo-id/pagination",
   "repository": "git://github.com/mo-id/moid-pagination.git",
   "author": "moid",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
