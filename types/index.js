@@ -1,1 +1,1 @@
-export * from "../__dist/esm/index2";
+export * from "./index.d";
