@@ -2,30 +2,26 @@
   "name": "@mo-id/pagination",
   "repository": "git://github.com/mo-id/moid-pagination.git",
   "author": "moid",
-  "version": "0.1.12",
+  "version": "0.1.0",
   "license": "MIT",
-  "main": "__dist/index.js",
-  "module": "__dist/esm/index.js",
-  "typings": "__dist/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "__dist",
-    "__src",
-    "react"
+    "dist",
+    "src"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build && sh ./scripts/postbuild.sh",
+    "build": "tsdx build",
     "compile": "tsc",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "npm run build",
+    "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why",
-    "prepublish": "sh ./scripts/prepack.sh",
-    "postpublish": "sh ./scripts/postpack.sh"
+    "analyze": "size-limit --why"
   },
   "peerDependencies": {
     "@nestjs/common": ">=8",
@@ -44,6 +40,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "module": "dist/moid-pagination.esm.js",
   "size-limit": [
     {
       "path": "dist/moid-pagination.cjs.production.min.js",
