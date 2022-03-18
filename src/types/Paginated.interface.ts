@@ -1,4 +1,4 @@
-import { Pagination } from './Pagination.interface';
+import { Pagination } from "./Pagination.interface";
 
 export interface Paginated<Entity> {
   results: Entity[];

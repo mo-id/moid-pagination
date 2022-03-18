@@ -1,7 +1,7 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo } from "react";
 
-import { Pagination } from '../types';
-import { makeInclusiveNumberRange } from '../utils';
+import { Pagination } from "../types";
+import { makeInclusiveNumberRange } from "../utils";
 
 interface UsePagination {
   previousPage: number;
@@ -16,9 +16,10 @@ export function usePagination(
   windowSize: number,
   currentUrl: string
 ): UsePagination {
-  const previousPage = useMemo(() => Math.max(1, pagination.page - 1), [
-    pagination,
-  ]);
+  const previousPage = useMemo(
+    () => Math.max(1, pagination.page - 1),
+    [pagination]
+  );
 
   const nextPage = useMemo(
     () => Math.min(pagination.page + 1, pagination.totalPages),
@@ -28,7 +29,7 @@ export function usePagination(
   const getPathForPage = useCallback(
     (page: number) => {
       const newUrl = new URL(currentUrl);
-      newUrl.searchParams.set('pagina', String(page));
+      newUrl.searchParams.set("pagina", String(page));
       return `${newUrl.pathname}${newUrl.search}`;
     },
     [currentUrl]

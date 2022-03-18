@@ -1,2 +1,2 @@
-export * from './Paginated.interface';
-export * from './Pagination.interface';
+export * from "./Paginated.interface";
+export * from "./Pagination.interface";
