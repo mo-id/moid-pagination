@@ -10,7 +10,8 @@
   "files": [
     "__dist",
     "__src",
-    "react"
+    "react",
+    "types"
   ],
   "engines": {
     "node": ">=10"
