@@ -1,1 +1,1 @@
-export * from "../__dist/types";
+export * from "../dist/types";
